@@ -1,0 +1,294 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>لوجوهات تمور العطار</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=El+Messiri:wght@500;700&family=IBM+Plex+Sans+Arabic:wght@400;600&family=Marcellus&family=Reem+Kufi:wght@500;700&display=swap">
+<style>
+/* Layout: a contact sheet of logo proofs — each concept tested on sand, as a stamp, on kraft carton, and at avatar size */
+:root {
+  --bg: #EEE5D5; --surface: #F8F3EA; --ink: #2E1D13; --muted: #75604F; --line: #D9CCB6; --accent: #17807B;
+  --f-display: "Reem Kufi", "El Messiri", "Noto Kufi Arabic", sans-serif;
+  --f-body: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+  --f-latin: "Marcellus", Georgia, serif;
+  /* brand swatches: fixed in both themes, they are the product colors */
+  --b-date: #4B2C1C; --b-sand: #EAD9BB; --b-turq: #1E9C96; --b-kraft: #C8A274; --b-kraft-ink: #3A2416;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #17110C; --surface: #211812; --ink: #EFE4D2; --muted: #A8957F; --line: #3A2C21; --accent: #4FC1BA; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #17110C; --surface: #211812; --ink: #EFE4D2; --muted: #A8957F; --line: #3A2C21; --accent: #4FC1BA; color-scheme: dark }
+
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.7; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 16px; padding-block: 40px 64px; display: grid; gap: 32px; }
+h1, h2 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.25; }
+h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); font-weight: 700; }
+p { margin: 0; max-width: 65ch; }
+.intro { display: grid; gap: 12px; }
+.muted { color: var(--muted); }
+
+.controls { display: flex; flex-wrap: wrap; gap: 24px 40px; align-items: start; padding-block: 18px; border-block: 1px solid var(--line); }
+.group { display: grid; gap: 8px; min-width: 0; }
+.label { font-size: .8rem; color: var(--muted); letter-spacing: .02em; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tags button { font: inherit; font-size: .92rem; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.tags button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.tags button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.custom { font: inherit; font-size: .92rem; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); width: min(100%, 320px); }
+.custom:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.add { display: flex; flex-wrap: wrap; gap: 8px; }
+.add button { font: inherit; font-size: .92rem; padding: 6px 16px; border-radius: 999px; border: 0; background: var(--accent); color: var(--surface); cursor: pointer; }
+.add button:focus-visible, .tags .del:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.chip { display: inline-flex; align-items: center; gap: 2px; }
+.tags .del { padding: 6px 10px; color: var(--muted); line-height: 1; }
+.tags .del:hover { color: var(--ink); border-color: var(--muted); }
+.swatches { display: flex; flex-wrap: wrap; gap: 10px; }
+.sw { display: flex; align-items: center; gap: 6px; font-size: .8rem; color: var(--muted); }
+.sw i { width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--line); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 520px), 1fr)); gap: 28px; }
+.card { display: grid; gap: 12px; min-width: 0; }
+.card header { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; align-items: baseline; }
+.num { font-family: var(--f-latin); font-size: 1.5rem; color: var(--accent); grid-row: span 2; font-variant-numeric: tabular-nums; }
+.card h2 { font-size: 1.15rem; font-weight: 700; }
+.card header p { font-size: .9rem; color: var(--muted); }
+
+.tile { --acc: var(--b-turq); --rev: var(--b-turq); border-radius: 6px; margin: 0; display: grid; place-items: center; min-width: 0; }
+.main { background: var(--b-sand); color: var(--b-date); --cut: var(--b-sand); padding: 36px 20px; min-height: 260px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.stamp { background: var(--b-date); color: var(--b-sand); --cut: var(--b-date); padding: 18px; }
+.stamp svg { width: min(100%, 120px); height: auto; }
+.kraft { gap: 10px; align-content: center; background: var(--b-kraft); color: var(--b-kraft-ink); --cut: var(--b-kraft); --acc: currentColor; --rev: var(--b-kraft); padding: 36px 20px; min-height: 260px; grid-column: 1 / -1; order: -1; }
+.tiny { background: var(--surface); border: 1px solid var(--line); padding: 12px; gap: 8px; align-content: center; }
+.avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--b-date); color: var(--b-sand); --cut: var(--b-date); display: grid; place-items: center; }
+.avatar svg { width: 34px; height: 34px; }
+.tiny figcaption, .cap { font-size: .72rem; color: var(--muted); text-align: center; }
+.kraft .cap { color: var(--b-kraft-ink); opacity: .7; }
+
+.lockup { display: flex; align-items: center; gap: 18px; text-align: center; }
+.lockup.v { flex-direction: column; gap: 10px; }
+.lockup.h { text-align: start; }
+.mark { width: 104px; height: 104px; flex: none; }
+.words { display: grid; gap: 2px; justify-items: center; min-width: 0; }
+.lockup.h .words { justify-items: start; }
+.name { font-family: var(--f); font-size: clamp(2rem, 5.4vw, 2.7rem); font-weight: 700; line-height: 1.15; white-space: nowrap; }
+.desc { font-family: var(--f-display); font-size: 1rem; font-weight: 500; letter-spacing: .04em; color: var(--acc); }
+.tag { font-family: var(--f-body); font-size: .95rem; opacity: .85; }
+.latin { font-family: var(--f-latin); font-size: .72rem; letter-spacing: .28em; text-transform: uppercase; opacity: .75; direction: ltr; }
+.kraft .desc { color: currentColor; }
+
+.next { display: grid; gap: 10px; padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+.next h2 { font-size: 1.2rem; }
+.next ol { margin: 0; padding-inline-start: 1.3em; display: grid; gap: 6px; }
+
+@media (max-width: 560px) {
+  .main, .kraft { min-height: 220px; padding: 28px 12px; }
+  .mark { width: 84px; height: 84px; }
+  .lockup.h { flex-direction: column; text-align: center; }
+  .lockup.h .words { justify-items: center; }
+}
+</style>
+
+<div class="wrap" dir="rtl" lang="ar">
+  <section class="intro">
+    <h1>لوجوهات تمور العطار</h1>
+    <p class="muted">١٠ اتجاهات للوجو. كل واحد متجرب ٤ مرات: على علبة رملي، كختم لوحده، مطبوع لون واحد على كرتونة كرافت، وبحجم صورة البروفايل. اختاروا ٢ أو ٣ أرقام، وبعدين نطوّرهم ونعمل عليهم علب يومي وهدايا.</p>
+  </section>
+
+  <section class="controls" aria-label="خيارات العرض">
+    <div class="group">
+      <span class="label" id="tag-label">جرّب الشعار تحت كل اللوجوهات</span>
+      <div class="tags" role="group" aria-labelledby="tag-label" id="tag-buttons"></div>
+      <form class="add" id="add-tag">
+        <input id="custom-tag" class="custom" type="text" placeholder="أو اكتب شعارك هنا…" aria-label="اكتب شعار من عندك" maxlength="40">
+        <button type="submit" id="save-tag" hidden>احفظ الشعار</button>
+      </form>
+      <span class="label" id="tag-status" role="status"></span>
+    </div>
+    <div class="group">
+      <span class="label" id="harakat-label">التشكيل</span>
+      <div class="tags" role="group" aria-labelledby="harakat-label" id="harakat-buttons">
+        <button type="button" data-h="0" aria-pressed="true">من غير تشكيل</button>
+        <button type="button" data-h="1" aria-pressed="false">بالتشكيل</button>
+      </div>
+    </div>
+    <div class="group">
+      <span class="label">ألوان العلامة</span>
+      <div class="swatches">
+        <span class="sw"><i style="background:var(--b-date)"></i>بني التمر</span>
+        <span class="sw"><i style="background:var(--b-sand)"></i>رملي</span>
+        <span class="sw"><i style="background:var(--b-turq)"></i>تركواز عين سيوة</span>
+        <span class="sw"><i style="background:var(--b-kraft)"></i>كرافت الكرتونة</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid" id="grid"></section>
+
+  <section class="next">
+    <h2>الخطوة الجاية</h2>
+    <ol>
+      <li>ابعتوا أرقام الكونسبتات اللي عجبتكم (مثلاً: ١ و٨) والشعار المفضل.</li>
+      <li>نطوّر المختار: خط مرسوم مخصوص، وضبط الرمز، ونسخة إنجليزي.</li>
+      <li>نعمل صور للوجو على علبة البيع اليومي وعلبة الهدايا.</li>
+      <li>عليكم: الكشف عن الاسم في جهاز تنمية التجارة الداخلية (سجل العلامات)، وفتح إنستجرام وفيسبوك للتأكد إن الاسم متاح.</li>
+    </ol>
+  </section>
+</div>
+
+<script>
+const date = (t = '') => `<path transform="${t}" d="M50 18C66 18 72 38 72 55C72 74 62 86 50 86C38 86 28 74 28 55C28 38 34 18 50 18Z"/>`;
+const fronds = `<path d="M50 36Q28 26 10 44Q30 32 50 40Z"/><path d="M50 34Q36 14 18 12Q36 20 48 38Z"/><path d="M50 34Q53 14 46 3Q59 16 52 36Z"/><path d="M50 34Q64 14 82 12Q64 20 52 38Z"/><path d="M50 36Q72 26 90 44Q70 32 50 40Z"/>`;
+const saw = () => { let d = ''; for (let x = 20; x < 80; x += 8) d += `M${x} 20L${x + 4} 27L${x + 8} 20`; return d; };
+
+const SYM = {
+  seal: `<circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="3"/>
+    <circle cx="50" cy="50" r="39" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="1.5 3"/>
+    <text x="50" y="54" text-anchor="middle" font-family="'Aref Ruqaa',serif" font-weight="700" font-size="42" fill="currentColor">ع</text>
+    <ellipse cx="50" cy="80" rx="8" ry="5" fill="var(--acc)"/>`,
+  bunch: `<path d="M26 10Q54 16 58 40" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+    <g fill="currentColor"><ellipse cx="50" cy="46" rx="6" ry="8"/><ellipse cx="64" cy="47" rx="6" ry="8"/><ellipse cx="43" cy="60" rx="6" ry="8"/>
+    <ellipse cx="71" cy="61" rx="6" ry="8"/><ellipse cx="50" cy="74" rx="6" ry="8"/><ellipse cx="64" cy="75" rx="6" ry="8"/><ellipse cx="57" cy="88" rx="6" ry="8"/></g>
+    <ellipse cx="57" cy="61" rx="6" ry="8" fill="var(--acc)"/>`,
+  palm: `<g fill="currentColor">${fronds}<path d="M47 38H53L56 92H44Z"/><rect x="30" y="92" width="40" height="3" rx="1.5"/></g>
+    <g stroke="var(--rev)" stroke-width="1.2"><path d="M45.5 52H54.5M45 64H55M44.6 76H55.4"/></g>
+    <g fill="var(--acc)"><circle cx="43" cy="44" r="3"/><circle cx="47" cy="48" r="3"/><circle cx="57" cy="44" r="3"/><circle cx="53" cy="48" r="3"/></g>`,
+  weave: `<rect x="10" y="10" width="80" height="80" rx="3" fill="none" stroke="currentColor" stroke-width="3"/>
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round">${[0, 90, 180, 270].map(r => `<path transform="rotate(${r} 50 50)" d="${saw()}"/>`).join('')}</g>
+    <path d="M50 32L68 50L50 68L32 50Z" fill="none" stroke="currentColor" stroke-width="2"/>
+    <g fill="var(--acc)">${date('translate(50 50) scale(.32) translate(-50 -52)')}</g>
+    <g fill="currentColor"><circle cx="10" cy="10" r="4"/><circle cx="90" cy="10" r="4"/><circle cx="10" cy="90" r="4"/><circle cx="90" cy="90" r="4"/></g>`,
+  amun: `<circle cx="50" cy="30" r="13" fill="var(--acc)"/>
+    <g stroke="var(--acc)" stroke-width="3" stroke-linecap="round">${[-80, -50, -20, 20, 50, 80].map(a => { const r = a * Math.PI / 180; return `<path d="M${50 + 18 * Math.sin(r)} ${30 - 18 * Math.cos(r)}L${50 + 25 * Math.sin(r)} ${30 - 25 * Math.cos(r)}"/>`; }).join('')}</g>
+    <g fill="currentColor">${date('translate(50 68) scale(.62) translate(-50 -52)')}</g>
+    <path d="M14 92H86" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>`,
+  ta: `<g fill="currentColor"><g transform="translate(0 -14) scale(1)">${fronds}</g>
+    <path d="M46 22H54V64H46Z"/>
+    <path d="M12 76Q12 64 26 64H62Q88 64 88 76Q88 88 66 88H26Q12 88 12 76ZM30 72Q24 72 24 76Q24 80 30 80H64Q76 80 76 76Q76 72 64 72Z" fill-rule="evenodd"/></g>
+    <g fill="var(--acc)"><circle cx="43" cy="30" r="3"/><circle cx="57" cy="30" r="3"/><circle cx="50" cy="34" r="3"/></g>`,
+  camel: `<circle cx="80" cy="22" r="8" fill="var(--acc)"/>
+    <path fill="currentColor" d="M14 40Q16 33 23 35L26 37Q28 44 31 50Q36 36 46 40Q52 29 60 39Q69 41 71 52L73 72H68L66 57L63 72H58L57 57Q48 59 40 57L38 72H33L33 57L30 72H25L26 54Q22 46 20 42Q16 43 14 40Z"/>
+    <path d="M4 84Q28 72 50 80T96 78" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <path d="M10 94Q34 86 56 92T96 90" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/>`,
+  shali: `<path fill="currentColor" d="M10 88V60Q10 54 16 54V46Q16 40 22 40H30V30Q30 24 36 24H44V14Q44 9 50 9Q56 9 56 14V28H66Q72 28 72 34V44H80Q86 44 86 50V60Q90 60 90 66V88Z"/>
+    <g fill="var(--rev)"><rect x="22" y="58" width="4" height="7" rx="2"/><rect x="36" y="38" width="4" height="7" rx="2"/><rect x="48" y="20" width="4" height="7" rx="2"/>
+    <rect x="62" y="40" width="4" height="7" rx="2"/><rect x="76" y="58" width="4" height="7" rx="2"/><path d="M44 88V76Q50 67 56 76V88Z"/></g>
+    <path d="M4 92H96" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>`,
+  pattern: `<g fill="currentColor">${date('translate(50 54) scale(1.12) translate(-50 -52)')}<path d="M44 10H56L53 17H47Z"/></g>
+    <g fill="none" stroke="var(--rev)" stroke-width="2.4" stroke-linejoin="round">
+    <path d="M38 38L44 32L50 38L56 32L62 38"/><path d="M32 54L38 48L44 54L50 48L56 54L62 48L68 54"/><path d="M34 70L40 64L46 70L52 64L58 70L64 64L66 66"/></g>
+    <g fill="var(--rev)"><circle cx="50" cy="80" r="2.6"/><circle cx="42" cy="79" r="2"/><circle cx="58" cy="79" r="2"/></g>`,
+  drop: `<path d="M50 6C50 6 18 46 18 64C18 82 32 95 50 95C68 95 82 82 82 64C82 46 50 6 50 6Z" fill="none" stroke="var(--acc)" stroke-width="4"/>
+    <g fill="currentColor">${date('translate(50 62) scale(.5) translate(-50 -52)')}</g>
+    <g fill="none" stroke="var(--acc)" stroke-width="2.2" stroke-linecap="round"><path d="M32 82Q50 90 68 82"/></g>`,
+};
+
+const C = [
+  { sym: 'seal', name: 'تُمُور العَطَّار', latin: 'Tomour Al-Attar', f: 'Aref Ruqaa', lay: 'v', idea: 'ختم «ع» زي ختم العيلة القديم، وتحته تمرة. ينفع ختم على أي كرتونة' },
+  { sym: 'bunch', name: 'تُمُور العَطَّار', latin: 'Tomour Al-Attar', f: 'Reem Kufi', lay: 'h', idea: 'عرجون بلح مبسط، وفيه حبة واحدة تركواز هي اللي بتميزه' },
+  { sym: 'palm', name: 'تُمُور العَطَّار', latin: 'Tomour Al-Attar', f: 'El Messiri', lay: 'v', idea: 'نخلة واضحة ومعاها سباطة بلح. مفهومة لأي حد، بس المنافسين بيستخدموا نخل كتير' },
+  { sym: 'weave', name: 'بَيْت العَطَّار', desc: 'تُمُور سِيوَة', latin: 'Beit Al-Attar · Siwa', f: 'Reem Kufi', lay: 'h', idea: 'إطار من مثلثات التطريز السيواوي، وجواه تمرة. أقوى اتجاه للهدايا والمناسبات' },
+  { sym: 'amun', name: 'بَيْت العَطَّار', desc: 'تُمُور سِيوَة', latin: 'Beit Al-Attar · Siwa', f: 'El Messiri', lay: 'v', idea: 'قرص شمس آمون طالع فوق تمرة. بيحكي قصة سيوة ومعبد آمون' },
+  { sym: 'ta', name: 'العَطَّار', desc: 'تُمُور سِيوَة', latin: 'Al-Attar · Siwa Dates', f: 'Aref Ruqaa', lay: 'h', idea: 'حرف «ط» من «العطار» متشكّل نخلة. الحرف نفسه هو الرمز' },
+  { sym: 'camel', name: 'العَطَّار', desc: 'تُمُور سِيوَة', latin: 'Al-Attar · Siwa Dates', f: 'Reem Kufi', lay: 'h', idea: 'قافلة الواحة: الطريق من سيوة لإسكندرية. مناسب للتوصيل والحملات' },
+  { sym: 'shali', name: 'دَار العَطَّار', desc: 'تُمُور سِيوَة', latin: 'Dar Al-Attar · Siwa', f: 'Aref Ruqaa', lay: 'v', idea: 'قلعة شالي الطين، وبابها على شكل تمرة. اتجاه فخم وتراثي' },
+  { sym: 'pattern', name: 'أَصْل سِيوَة', desc: 'تُمُور العَطَّار', latin: 'Asl Siwa · Al-Attar', f: 'El Messiri', lay: 'h', idea: 'تمرة عليها نقش التطريز السيواوي. «سيوة» في الاسم نفسه' },
+  { sym: 'drop', name: 'عَطَّار الوَاحَة', desc: 'تُمُور سِيوَة', latin: 'Attar Al-Waha · Siwa', f: 'Reem Kufi', lay: 'v', idea: 'قطرة من عيون سيوة، وجواها تمرة. التركواز هنا هو البطل' },
+];
+
+// shown only to viewers without the shared list (signed out); everyone else sees brand/taglines from db
+let TAGS = ['سِيوَة فِي كُلِّ تَمْرَة', 'شَمْسُ سِيوَة فِي كُلِّ حَبَّة', 'أَمَانَةُ العَطَّار مِنْ سِيوَة', 'أَصْلُ التَّمْر', 'نَخْلُ الوَاحَة بِيِطْرَح تَمْرَ العَطَّار', 'أُصُولُ التَّمْرِ السِّيوِي', 'أَصْلُ الوَاحَة'];
+let tag = TAGS[0];
+try { tag = localStorage.getItem('attar-tag') ?? tag; } catch (e) {}
+let harakat = false;
+try { harakat = localStorage.getItem('attar-harakat') === '1'; } catch (e) {}
+const strip = t => t.replace(/[ً-ْٰ]/g, '');
+const show = t => harakat ? t : strip(t);
+const match = t => TAGS.find(x => strip(x) === strip(t)) ?? t; // old plain picks map onto the vocalized list
+tag = match(tag);
+
+const svg = s => `<svg class="mark" viewBox="0 0 100 100" aria-hidden="true">${SYM[s]}</svg>`;
+const lockup = c => `<div class="lockup ${c.lay}" style="--f:'${c.f}', var(--f-display)">${svg(c.sym)}
+  <div class="words"><div class="name">${show(c.name)}</div>${c.desc ? `<div class="desc">${show(c.desc)}</div>` : ''}
+  <div class="tag" data-tag></div><div class="latin">${c.latin}</div></div></div>`;
+const ar = n => n.toLocaleString('ar-EG', { minimumIntegerDigits: 2, useGrouping: false });
+
+const renderGrid = () => document.getElementById('grid').innerHTML = C.map((c, i) => `
+  <article class="card" id="c${i + 1}">
+    <header><span class="num">${ar(i + 1)}</span><h2>${strip(c.name)}${c.desc ? ` · ${strip(c.desc)}` : ''}</h2><p>${c.idea}</p></header>
+    <div class="tile main" role="img" aria-label="لوجو ${strip(c.name)}">${lockup(c)}</div>
+    <div class="row">
+      <figure class="tile stamp">${svg(c.sym)}</figure>
+      <figure class="tile kraft">${lockup(c)}<figcaption class="cap">لون واحد على الكرتونة</figcaption></figure>
+      <figure class="tile tiny"><div class="avatar">${svg(c.sym)}</div><figcaption>صورة البروفايل</figcaption></figure>
+    </div>
+  </article>`).join('');
+
+const btns = document.getElementById('tag-buttons');
+const custom = document.getElementById('custom-tag');
+const saveBtn = document.getElementById('save-tag');
+const status = document.getElementById('tag-status');
+let ref = null; // db doc holding the shared tagline list, null when this viewer can't reach db
+
+const setTag = t => {
+  tag = t;
+  document.querySelectorAll('[data-tag]').forEach(el => { el.textContent = show(t); el.hidden = !t; });
+  btns.querySelectorAll('[data-v]').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === t));
+  try { localStorage.setItem('attar-tag', t); } catch (e) {}
+};
+const button = (text, attrs) => { const b = document.createElement('button'); b.type = 'button'; b.textContent = text; Object.assign(b.dataset, attrs); return b; };
+const renderTags = () => {
+  btns.replaceChildren(...TAGS.map(t => {
+    const chip = document.createElement('span'); chip.className = 'chip';
+    chip.append(button(show(t), { v: t }));
+    if (ref) { const d = button('×', { del: t }); d.className = 'del'; d.setAttribute('aria-label', 'امسح الشعار ' + strip(t)); chip.append(d); }
+    return chip;
+  }), button('بدون شعار', { v: '' }));
+  setTag(tag);
+};
+const save = async list => {
+  try { await ref.set({ list }); status.textContent = ''; }
+  catch (e) { status.textContent = 'مقدرتش أحفظ. لازم تكون مسجّل دخول وعندك صلاحية تعديل على الصفحة.'; }
+};
+
+btns.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if ('del' in b.dataset) {
+    const list = TAGS.filter(x => x !== b.dataset.del);
+    if (tag === b.dataset.del) setTag(list[0] || '');
+    save(list);
+  } else { custom.value = ''; setTag(b.dataset.v); }
+});
+custom.addEventListener('input', () => setTag(custom.value.trim()));
+document.getElementById('add-tag').addEventListener('submit', e => {
+  e.preventDefault();
+  const t = custom.value.trim();
+  if (!ref || !t) return;
+  custom.value = '';
+  if (!TAGS.some(x => strip(x) === strip(t))) save([...TAGS, t]);
+  setTag(match(t));
+});
+
+const harakatBtns = document.getElementById('harakat-buttons');
+const renderHarakat = () => harakatBtns.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', (b.dataset.h === '1') === harakat));
+harakatBtns.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  harakat = b.dataset.h === '1';
+  try { localStorage.setItem('attar-harakat', harakat ? '1' : '0'); } catch (e) {}
+  renderHarakat(); renderGrid(); renderTags();
+});
+
+if (tag && !TAGS.includes(tag)) custom.value = tag;
+renderHarakat(); renderGrid(); renderTags();
+
+(window.claude?.use('db') ?? Promise.resolve(null)).then(db => {
+  if (!db) return; // signed out: keep the default list, no saving
+  ref = db.doc('brand/taglines');
+  saveBtn.hidden = false;
+  ref.onSnapshot(snap => {
+    if (snap.exists) { TAGS = [...(snap.data().list || [])]; tag = match(tag); }
+    renderTags();
+  });
+});
+</script>
+
+</body></html>
